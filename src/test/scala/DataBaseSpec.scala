@@ -1,6 +1,6 @@
 class DataBaseSpec extends UnitSpec:
   trait context:
-    val dataBase = DataBase()
+    val dataBase = DataBase.initialize
     val directSale = SalesRoute.Direct()
 
   "#initialize" should {
