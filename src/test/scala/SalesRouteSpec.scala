@@ -1,7 +1,7 @@
 class SalesRouteSpec extends UnitSpec:
   trait context:
     val dataBase = DataBase.initialize
-    val directSale = SalesRoute.Direct()
+    val directSale = SalesRoute.Direct
 
   "#addAgent" should {
     "代理店をDBに追加できる" in new context:

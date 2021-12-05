@@ -1,9 +1,9 @@
-sealed trait SalesRoute
+enum SalesRoute:
+  case Direct
+  case Agent(name: String)
 
 object SalesRoute:
-  case class Direct() extends SalesRoute
-  case class Agent(name: String) extends SalesRoute
-
   def addAgents(names: String*)(implicit dataBase: DataBase): DataBase =
-    val agents = names.map(name => SalesRoute.Agent(name))
+    val agents: Seq[SalesRoute.Agent] =
+      names.map(name => SalesRoute.Agent(name))
     dataBase.addAgents(agents*)
