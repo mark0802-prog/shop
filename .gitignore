@@ -1,0 +1,26 @@
+# intellij
+/src/intellij*/*.iml
+/src/intellij*/*.ipr
+/src/intellij*/*.iws
+**/.cache
+/.idea
+/.settings
+
+# vscode
+/.vscode
+
+# sbt's target directories
+/target/
+/project/**/target/
+/test/files/target/
+/test/target/
+/build-sbt/
+local.sbt
+
+# metals
+.metals
+.bloop
+project/**/metals.sbt
+.bsp
+
+.DS_Store
